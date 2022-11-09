@@ -1,6 +1,8 @@
 import { ReactNode } from 'react'
 import { Navigation } from './shared/Navigation'
 
+import '../styles/globals.css'
+
 interface RootLayoutProps {
   children: ReactNode
 }
