@@ -1,14 +1,9 @@
-import Link from 'next/link'
 import { ReactNode } from 'react'
+import { Navigation } from './shared/Navigation'
 
 interface RootLayoutProps {
   children: ReactNode
 }
-
-const links = [
-  { label: 'Home', route: '/' },
-  { label: 'About', route: '/about' }
-]
 
 export default function RootLayout ({ children }: RootLayoutProps) {
   return (
@@ -18,19 +13,7 @@ export default function RootLayout ({ children }: RootLayoutProps) {
       </head>
 
       <body>
-        <header>
-          <nav>
-            <ul>
-              {links.map(link => (
-                <li key={link.route}>
-                  <Link href={link.route}>
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </header>
+        <Navigation />
 
         {children}
       </body>
